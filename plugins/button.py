@@ -163,10 +163,6 @@ async def youtube_dl_call_back(bot, update):
 
     if t_response:
         logger.info(t_response)
-        try:
-            os.remove(save_ytdl_json_path)
-        except FileNotFoundError as exc:
-            pass
         
         end_one = datetime.now()
         time_taken_for_download = (end_one -start).seconds
@@ -281,7 +277,6 @@ async def youtube_dl_call_back(bot, update):
             time_taken_for_upload = (end_two - end_one).seconds
             try:
                 shutil.rmtree(tmp_directory_for_each_user)
-                os.remove(thumbnail)
             except:
                 pass
             await update.message.edit_caption(
