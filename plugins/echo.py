@@ -110,7 +110,6 @@ async def echo(bot, update):
             "yt-dlp",
             "--no-warnings",
             "--youtube-skip-hls-manifest",
-            "-keep",
             "-j",
             url
         ]
