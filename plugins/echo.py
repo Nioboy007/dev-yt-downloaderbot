@@ -27,7 +27,7 @@ from plugins.database.add import add_user_to_database
 from pyrogram.types import Thumbnail
 
 
-@Client.on_message(filters.regex(r'https?:\/\/(?:www\.)?(?:m\.)?(?:youtube\.com|youtu\.be)\/(?:watch\?v=)?([a-zA-Z0-9_-]{11})$'))
+@Client.on_message(filters.regex(r'https?://(?:www\.)?(?:youtube\.com|youtu\.be)/([^/\r\n?]+)'))
 async def echo(bot, update):
     if Config.LOG_CHANNEL:
         try:
