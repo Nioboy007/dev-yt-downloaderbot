@@ -100,7 +100,6 @@ async def echo(bot, update):
         command_to_exec = [
             "yt-dlp",
             "--no-warnings",
-            "-keep",
             "--youtube-skip-hls-manifest",
             "-j",
             url,
